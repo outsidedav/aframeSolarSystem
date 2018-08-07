@@ -3,13 +3,234 @@
     <head>
         <title>A-Frame Solar System Lab</title>
         <script src="https://aframe.io/releases/0.8.2/aframe.min.js"></script>
+        <script src="https://cdn.rawgit.com/archilogic-com/aframe-gblock/6498b71d/dist/gblock.js"></script>
+        
     </head>
     <body>
         <a-scene>
+            <a-entity id="cameraWrapper" position="0 0 15">
+                <a-camera></a-camera>
+            </a-entity>
             <a-assets>
-                <img src="https://pixabay.com/get/eb37b00e2dfc083ed1534705fb0938c9bd22ffd41cb1114396f7c679a6/star-2211589_1920.jpg" id="skyTexture">
+                <img src="tycho_cyl_glow.png" id="skyTexture">
+                <img src="merc.png" id="merc">
+                <img src="earth.png" id="earth">
+                <img src="jup.png" id="jup">
             </a-assets>
-            <a-sky src="#skyTexture"></a-sky>
+            
+            <!-- sun -->
+            <a-entity>
+                <a-sphere position="0 0 0" radius="1" src="#merc">
+                    <a-animation attribute="rotation"
+                    dur="10000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                </a-sphere>
+            </a-entity>
+            
+            
+            <!--merc-->
+            <a-entity>
+                <a-sphere position="1.6 0 0" radius=".2" src="#merc">
+                    <a-animation attribute="rotation"
+                    dur="5000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                </a-sphere>
+                <a-animation attribute="rotation"
+                    dur="5000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            
+            
+            <!--venus-->
+            <a-entity>
+            <a-sphere position="2.8 0 0" radius=".45" src="#merc"></a-sphere>
+            <a-animation attribute="rotation"
+                    dur="16000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                <a-animation attribute="rotation"
+                    dur="1305"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            
+            <!--earth-->
+            <a-entity>
+            
+            <a-sphere position="4 0 0" radius=".5" src="#earth">
+             
+             <!--moon-->
+             <a-entity position="0 0 0">
+             <a-sphere position="0.75 0 0" radius="0.20"></a-sphere>
+             <a-animation attribute="rotation"
+                    dur="540"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+             </a-entity>
+             <!--moon ends-->
+             
+            </a-sphere>
+             <a-animation attribute="rotation"
+                    dur="15000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                <a-animation attribute="rotation"
+                    dur="3400"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            
+            <!-- mars -->
+            <a-entity>
+            <a-sphere position="6 0 0" radius=".25" src="#merc"></a-sphere>
+            <a-animation attribute="rotation"
+                    dur="21000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                <a-animation attribute="rotation"
+                    dur="1200"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            
+            <!-- jupiter -->
+            <a-entity>
+            <a-sphere position="20.8 0 0" radius="4.25" src="#jup"></a-sphere>
+            <a-animation attribute="rotation"
+                    dur="11000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                <a-animation attribute="rotation"
+                    dur="900"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            
+            <!--saturn-->
+            <a-entity>
+            <a-sphere position="38 0 0" radius="2" src="#merc"></a-sphere>
+            <a-animation attribute="rotation"
+                    dur="11000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                <a-animation attribute="rotation"
+                    dur="4000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            
+            <!--uranus-->
+            <a-entity>
+            <a-sphere position="70 0 0" radius="2" src="#merc"></a-sphere>
+            <a-animation attribute="rotation"
+                    dur="11000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                <a-animation attribute="rotation"
+                    dur="3000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            
+            <!--neptune-->
+            <a-entity>
+            <a-sphere position="100 0 0" radius="0.1" src="#merc"></a-sphere>
+            <a-animation attribute="rotation"
+                    dur="11000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+                <a-animation attribute="rotation"
+                    dur="1000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            
+            <!--pluto-->
+            <a-entity>
+            <a-sphere position="150 0 0" radius="0.1" src="#merc"></a-sphere>
+            <a-animation attribute="rotation"
+                    dur="11000"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    >
+                </a-animation>
+                <a-animation attribute="rotation"
+                    dur="5210"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-entity>
+            <a-sky src="#skyTexture">
+                                <a-animation attribute="rotation"
+                    dur="52100"
+                    fill="forward"
+                    to="0 360 0"
+                    repeat="indefinite"
+                    easing="linear"
+                    ></a-animation>
+            </a-sky>
+            
         </a-scene>
     </body>
 </html>
